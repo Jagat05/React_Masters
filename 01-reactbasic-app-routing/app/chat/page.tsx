@@ -1,29 +1,9 @@
-import {
-  EllipsisVertical,
-  House,
-  Mails,
-  MessageSquarePlus,
-  PhoneCall,
-  SearchIcon,
-  Settings,
-  Star,
-} from "lucide-react";
+import { EllipsisVertical, MessageSquarePlus, SearchIcon } from "lucide-react";
 import React from "react";
 
 const Chat = () => {
   return (
     <div className="flex h-screen text-white">
-      <div className="bg-[#29282B] w-[5%] flex flex-col items-center py-6 gap-6 text-gray-400">
-        <div className="flex flex-col items-center gap-6 p-4 border-b max-w-full">
-          <Mails size={20} />
-          <PhoneCall size={20} />
-          <Settings size={20} />
-        </div>
-
-        <Star size={20} />
-        <House size={20} />
-      </div>
-
       <div className="bg-[#1C1C1E] w-[33%] border-r border-gray-700">
         <div className="flex justify-between items-center px-4 h-14 border-b border-gray-700">
           <p className="text-lg font-medium">Chats</p>
@@ -55,7 +35,7 @@ const Chat = () => {
             <div className="w-10 h-10 bg-gray-500 rounded-full mr-3" />
             <div>
               <p className="text-sm font-medium">Ram Joshi</p>
-              <p className="text-xs text-gray-400">Let's meet tomorrow</p>
+              <p className="text-xs text-gray-400">Lets meet tomorrow</p>
             </div>
           </div>
           <div className="flex items-center px-3 py-3 rounded-lg hover:bg-[#2A2A2C] cursor-pointer">
