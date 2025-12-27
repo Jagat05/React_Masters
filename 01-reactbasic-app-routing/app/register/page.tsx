@@ -1,15 +1,8 @@
 "use client";
-// import React, { useState } from "react";
+
 import Image from "next/image";
 
 const LoginPage = () => {
-  // const [isLoading, setIsLoading] = useState(false);
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setIsLoading(true);
-  //   setTimeout(() => setIsLoading(false), 2000);
-  // };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-indigo-500 to-purple-600 px-5 font-sans">
@@ -17,7 +10,7 @@ const LoginPage = () => {
         {/* Logo */}
         <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg z-10">
           <Image
-            src="https://cdn.dribbble.com/userupload/41573963/file/original-ac839f228c8ebe7139e7a9cfcae7d3fa.png?resize=400x0"
+            src="/Owl.png"
             alt="Logo"
             width={64}
             height={64}
@@ -37,7 +30,6 @@ const LoginPage = () => {
         </div>
 
         {/* Form */}
-        {/* <form onSubmit={handleSubmit} className="px-8 py-10"> */}
         <form className="px-8 py-10">
           {/* Username */}
           <div className="mb-6">
@@ -83,24 +75,6 @@ const LoginPage = () => {
             />
           </div>
 
-          {/* Button */}
-          {/* <button
-            type="submit"
-            disabled={isLoading}
-            className="w-full py-4 rounded-xl font-bold text-white text-base
-                      bg-linear-to-r from-indigo-500 to-indigo-700
-                       shadow-lg shadow-indigo-500/30
-                       transition-all duration-300
-                       hover:-translate-y-0.5 hover:shadow-xl
-                       active:scale-95
-                       disabled:opacity-70 disabled:cursor-not-allowed"
-          >
-            {isLoading ? (
-              <div className="mx-auto w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            ) : (
-              "Sign In"
-            )}
-          </button> */}
           <button
             type="submit"
             className="w-full py-4 rounded-xl font-bold text-white text-base
