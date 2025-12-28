@@ -1,5 +1,6 @@
 import { EllipsisVertical, MessageSquarePlus, SearchIcon } from "lucide-react";
 import React from "react";
+import Message from "./message";
 
 const Chat = () => {
   return (
@@ -24,7 +25,16 @@ const Chat = () => {
         </div>
 
         <div className="px-2 space-y-1">
-          <div className="flex items-center px-3 py-3 rounded-lg hover:bg-[#2A2A2C] cursor-pointer">
+          <Message name="Jagat  Joshi" message="Hiii There !" />
+          <Message name="Sita Joshi" message="Lets meet tomorrow !" />
+          <Message name="Hari Joshi" message="Typing..." />
+          <Message name="Arjun Singh" message="Will Meet you tommorow" />
+          <Message name="Jagat  Joshi" message="Hiii There !" />
+          <Message name="Sita Joshi" message="Lets meet tomorrow !" />
+          <Message name="Hari Joshi" message="Typing..." />
+          {/* <Message name="Arjun Singh" message="Will Meet you tommorow" /> */}
+
+          {/* <div className="flex items-center px-3 py-3 rounded-lg hover:bg-[#2A2A2C] cursor-pointer">
             <div className="w-10 h-10 bg-gray-500 rounded-full mr-3" />
             <div>
               <p className="text-sm font-medium">Jagat Joshi</p>
@@ -51,7 +61,7 @@ const Chat = () => {
               <p className="text-sm font-medium">Sita Joshi</p>
               <p className="text-xs text-gray-400">Typing...</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

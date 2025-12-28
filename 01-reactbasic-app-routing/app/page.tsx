@@ -58,7 +58,7 @@ const Home = () => {
           </a>
         </div>{" "}
         <a
-          href="/chat"
+          href="/chats"
           className="text-indigo-600 font-extrabold hover:underline "
         >
           <div className="flex items-center justify-center">
