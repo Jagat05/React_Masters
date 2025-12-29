@@ -1,8 +1,30 @@
 import React from "react";
 
-const Product = (Productprops) => {
-  const { product } = Productprops;
+type ProductType = {
+  id: number;
+  category: string;
+  name: string;
+  details: string;
+  price: number;
+  rating: number;
+  image: string;
+  stock: number;
+  sizes: number[];
+  color: string[];
+  discount?: number;
+};
 
+const Product = ({ product }: { product: ProductType }) => {
+  console.log("Product:", product);
+  const [quantity, setQuantity] = React.useState(1);
+  const increment = () => {
+    if (quantity < product.stock) {
+      setQuantity(quantity + 1);
+    }
+  };
+  const decrement = () => {
+    if (quantity > 1) setQuantity(quantity - 1);
+  };
   return (
     <div className="w-72 bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300">
       {/* Image */}
@@ -32,6 +54,42 @@ const Product = (Productprops) => {
           <p className="text-sm text-yellow-500 font-medium">
             ★ {product.rating}
           </p>
+        </div>
+        <div className="flex justify-between items-center mt-2 space-x-2">
+          <p className="text-sm text-gray-500 mt-2">
+            {product.stock} items available
+          </p>
+          <div>
+            <button
+              onClick={increment}
+              className="
+    border-2 border-gray-400 rounded-lg 
+    px-2 py-1 
+    bg-white hover:bg-gray-100 
+    shadow-md hover:shadow-lg 
+    transition-all duration-200 
+    text-lg font-semibold
+  "
+            >
+              +
+            </button>
+
+            {/* {product.stock} */}
+            <span className="mx-2">{quantity}</span>
+            <button
+              onClick={decrement}
+              className="
+    border-2 border-gray-400 rounded-lg 
+    px-2.5 py-1
+    bg-white hover:bg-gray-100 
+    shadow-md hover:shadow-lg 
+    transition-all duration-200 
+    text-lg font-semibold
+  "
+            >
+              -
+            </button>
+          </div>
         </div>
 
         {/* Button */}
