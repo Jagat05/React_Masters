@@ -31,16 +31,16 @@ export default function Home() {
                 Counter App
               </a>
               <a
-                href="#"
+                href="/colorchanger"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
-                Comming..!
+                ColorChanger
               </a>
               <a
                 href="#"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
-                Comming..!
+                Comming Soon..!
               </a>
             </div>
           </div>

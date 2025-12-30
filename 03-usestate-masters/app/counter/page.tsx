@@ -20,11 +20,11 @@ const Counter = () => {
         <div className="bg-white h-80 w-60 flex flex-col items-center justify-center rounded-2xl">
           <p className="text-3xl font-bold">Counter</p>
 
-          <span className="flex items-center justify-center text-white font-bold h-10 w-10 bg-black rounded-full mt-10">
+          <span className="flex items-center justify-center text-white font-bold h-15 w-59 bg-gray-800 rounded-2xl mt-6">
             {num}
           </span>
 
-          <div className="flex gap-4 p-5 ">
+          <div className="flex gap-4 p-5 mt-6">
             <button
               onClick={increment}
               className="bg-black text-white h-10  hover:bg-gray-800 w-20 rounded-2xl"
@@ -40,7 +40,7 @@ const Counter = () => {
           </div>
           <button
             onClick={reset}
-            className="bg-black text-white h-10 w-20 hover:bg-gray-800 rounded-2xl mb-3"
+            className="bg-black text-white h-10 w-30 hover:bg-gray-800 rounded-2xl mb-3"
           >
             Reset
           </button>
