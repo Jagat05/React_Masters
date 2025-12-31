@@ -17,11 +17,11 @@ const Like = () => {
     <div className="min-h-screen bg-white flex items-center justify-center">
       <button
         onClick={handleLike}
-        className={`flex items-center justify-center h-10 w-10 bg-gray-100 ${
+        className={`flex items-center justify-center h-50 w-50 bg-gray-100 ${
           liked ? "text-blue-700" : "text-gray-700"
         }`}
       >
-        <ThumbsUp />
+        <ThumbsUp className="h-50 w-50" />
       </button>
     </div>
   );
