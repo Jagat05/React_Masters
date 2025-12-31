@@ -37,7 +37,7 @@ export default function Home() {
                 ColorChanger
               </a>
               <a
-                href="#"
+                href="dice"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
                 Comming Soon..!
