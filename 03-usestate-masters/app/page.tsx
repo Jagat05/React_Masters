@@ -31,6 +31,12 @@ export default function Home() {
                 Counter App
               </a>
               <a
+                href="like"
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
+              >
+                Like
+              </a>
+              <a
                 href="/colorchanger"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
@@ -40,7 +46,7 @@ export default function Home() {
                 href="dice"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
-                Comming Soon..!
+                Dice Game
               </a>
             </div>
           </div>
