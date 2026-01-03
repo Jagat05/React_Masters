@@ -31,10 +31,10 @@ export default function Home() {
                 Counter App
               </a>
               <a
-                href=""
+                href="/rockpaperscissors"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
-                Comming soon!
+                RockPaper
               </a>
               <a
                 href=""
