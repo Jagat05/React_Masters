@@ -37,6 +37,12 @@ export default function Home() {
                 Like
               </a>
               <a
+                href="youtubetogglebar"
+                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
+              >
+                youtubetogglebar
+              </a>
+              <a
                 href="/colorchanger"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
