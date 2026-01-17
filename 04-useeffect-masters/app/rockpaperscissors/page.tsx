@@ -2,13 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 
-const choices = ["rock", "paper", "scissors"];
+type Choice = "rock" | "paper" | "scissors";
+
+const choices: Choice[] = ["rock", "paper", "scissors"];
 
 const RockPaperScissors = () => {
-  const [userChoice, setUserChoice] = useState("");
-  const [comChoice, setComChoice] = useState("");
-  const [result, setResult] = useState("");
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [userChoice, setUserChoice] = useState<Choice | "">("");
+  const [comChoice, setComChoice] = useState<Choice | "">("");
+  const [result, setResult] = useState<string>("");
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   useEffect(() => {
     if (!userChoice || !comChoice) return;
@@ -28,7 +30,7 @@ const RockPaperScissors = () => {
     setIsPlaying(false);
   }, [userChoice, comChoice]);
 
-  const playGame = (choice) => {
+  const playGame = (choice: Choice) => {
     setIsPlaying(true);
     setUserChoice(choice);
     setResult("Computer is choosing...");
@@ -37,7 +39,7 @@ const RockPaperScissors = () => {
     setTimeout(() => {
       const randomChoice = choices[Math.floor(Math.random() * choices.length)];
       setComChoice(randomChoice);
-    }, 2);
+    }, 300);
   };
 
   return (
@@ -50,10 +52,10 @@ const RockPaperScissors = () => {
           <div className="flex flex-col items-center gap-3">
             <p className="font-bold">You</p>
 
-            <div className="w-32 h-32 bg-[#74D0DB]rounded-xl flex items-center justify-center">
+            <div className="w-32 h-32 bg-[#74D0DB] rounded-xl flex items-center justify-center">
               {userChoice ? (
                 <img
-                  src={`${userChoice}.png`}
+                  src={`/${userChoice}.png`}
                   alt={userChoice}
                   className="w-full h-full object-contain"
                 />
@@ -72,7 +74,7 @@ const RockPaperScissors = () => {
             <div className="w-32 h-32 bg-[#74D0DB] rounded-xl flex items-center justify-center">
               {comChoice ? (
                 <img
-                  src={`${comChoice}.png`}
+                  src={`/${comChoice}.png`}
                   alt={comChoice}
                   className="w-full h-full object-contain"
                 />
@@ -91,7 +93,7 @@ const RockPaperScissors = () => {
               key={choice}
               onClick={() => playGame(choice)}
               disabled={isPlaying}
-              className="bg-black text-white px-4 py-2 rounded-xl hover:bg-gray-800 capitalize"
+              className="bg-black text-white px-4 py-2 rounded-xl hover:bg-gray-800 capitalize disabled:opacity-50"
             >
               {choice}
             </button>
