@@ -6,20 +6,43 @@ This repository documents my learning path while building modern React and Next.
 
 ---
 
+## 🔗 Live Projects / Demos
+
+- 🌐 **React Masters**  
+  https://react-masters.vercel.app/
+
+- 🌐 **useState Demo**  
+  https://use-state-five-wine.vercel.app/
+
+- 🌐 **useEffect Demo**  
+  https://use-effect-dun.vercel.app/
+
+---
+
 ## 📚 Topics Covered So Far
+
+1. React Basics  
+2. Components  
+3. Next.js App Router (Routing Concept)  
+4. Route Groups `( … )`  
+5. Layouts in App Router  
+6. Props (Properties)  
+7. Props with TypeScript  
+8. **useState Hook**  
+9. **useEffect Hook**
 
 ---
 
 ## 1. React Basics
 
-React is a **JavaScript library for building user interfaces**.
+React is a **JavaScript library for building user interfaces**.  
 It allows developers to create fast, interactive UIs using **components**.
 
 Key ideas:
 
-* UI is broken into small reusable parts
-* Components return JSX
-* React updates the UI efficiently
+- UI is broken into small reusable parts
+- Components return JSX
+- React updates the UI efficiently
 
 ### Example
 
@@ -178,7 +201,80 @@ const Message = ({ name, message }: MessageProps) => {
 ```
 
 ---
+## 8. useState Hook
 
+The **useState hook** allows components to manage **local state.**
+
+* State updates trigger re-renders
+* Useful for counters, forms, toggles, etc.
+
+```jsx
+const [count, setCount] = useState(0);
+```
+```jsx
+<button onClick={() => setCount(count + 1)}>
+  Increment
+</button>
+```
+
+## 9. useEffect Hook
+
+The useEffect hook is used to handle side effects such as:
+
+* Data fetching
+* DOM updates
+
+
+### Example
+
+```jsx
+useEffect(() => {
+  fetchData();
+}, []);
+```
+
+## useEffect Dependency Array Syntax Types
+
+The second argument of `useEffect` determines **when the effect runs**. There are **three main types**:
+
+---
+
+### 1. Empty Array `[]` — Run Once on Mount
+
+```ts
+useEffect(() => {
+  console.log("Runs only once when component mounts");
+}, []);
+```
+* -Called only once after the first render
+
+### 2. No Array (Omitted) — Run on Every Render
+```tsx
+useEffect(() => {
+  console.log("Runs after every render");
+});
+```
+* -No dependency array means effect runs after every render.
+* Use carefully — can cause infinite loops if you update state inside without conditions.
+
+### 3. Array with Dependencies [dep1, dep2] — Run When Dependencies Change
+```tsx
+import { useState, useEffect } from "react";
+
+const [count, setCount] = useState<number>(0);
+const [name, setName] = useState<string>("");
+
+useEffect(() => {
+  console.log(`Count or Name changed: ${count}, ${name}`);
+}, [count, name]);
+```
+* Runs only when one of the dependencies changes
+
+| Dependency Array       | Runs When                       | Notes                                            |
+|------------------------|---------------------------------|-------------------------------------------------|
+| `[]`                   | Once, after first render        | Mount only                                      |
+| *(omitted)*            | After **every render**          | Can cause infinite loops if state changes inside |
+| `[dep1, dep2, ...]`    | When **any dependency changes** | Best for tracking specific state/props         |
 
 ---
 
