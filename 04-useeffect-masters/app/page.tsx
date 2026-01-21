@@ -37,10 +37,10 @@ export default function Home() {
                 RockPaper
               </a>
               <a
-                href=""
+                href="datafetchingaxios"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition hover:bg-gray-200"
               >
-                Comming soon!
+                DataFetchingAxios
               </a>
               <a
                 href=""
